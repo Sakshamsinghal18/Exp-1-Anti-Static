@@ -1,0 +1,146 @@
+:root {
+    --bg-color: #f8fafc;
+    --panel-bg: #ffffff;
+    --text-color: #1e293b;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 95%;
+    max-width: 1000px;
+    background: var(--panel-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #64748b;
+}
+
+.simulation-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-wrapper img {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+}
+
+/* Covers the PowerPoint toolbar icons in the bottom-left corner of every slide */
+.icon-hider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: 12%;
+    background-color: #ffffff;
+    pointer-events: none;
+}
+
+.controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    background: #f8fafc;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.step-indicator {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+.nav-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

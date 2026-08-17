@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Static Electrical Resistance Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Anti-Static Electrical Resistance Test in Footwear</h1>
+            <p>EN ISO 20344 Virtual Lab Simulation</p>
+        </header>
+
+        <main class="simulation-workspace">
+            <div class="image-container">
+                <img id="step-image" src="step1.png" alt="Simulation Step">
+            </div>
+
+            <div class="controls-container">
+                <button id="prev-btn" class="nav-btn" disabled><i class="fa-solid fa-arrow-left"></i> Previous</button>
+                <div class="step-indicator">Step <span id="current-step">1</span> of 30</div>
+                <button id="next-btn" class="nav-btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
